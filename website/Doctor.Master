@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Doctor.master.cs" Inherits="website.Doctor" %>
+<style>
+    .BODY {
+
+	color: #000000;
+}
+.A {
+	text-decoration: underline;
+	color: #003F80;
+}
+
+.style1{
+	list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  background-color: #fcf8dc;
+  color: #3f51b5;
+}
+
+.style2 {
+	color: #003F80;
+	font-size: 11px;
+	font-family: Tahoma;
+}
+ .style3 {
+            font-family:Arial;
+            font-size: 20px;
+            color: red;
+         
+        }
+
+    </style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script runat="server">
+
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body bgcolor ="#FCF8DC" bottommargin="0" leftmargin="0" rightmargin="0" topmargin="0" >
+    
+    <table " width="100%" cellpadding="0" cellspacing="0" border="0">
+<tr valign="top">
+<!----- insert logo below ------------------------------------------>
+ <td><img src="img/logo1.jpg" border="0" alt="" style="width: 325px; height: 180px;"/></td>
+<!------------------------------------------------------------------>
+  <td width="100%"  style="background-image: url(img/topbg.jpg); background-color: transparent; text-align: center">&nbsp;<br />
+    <span style="font-size: 24pt; color: red"><em><strong>
+        <br />
+        Специализирана извънболнична медицинска помощ</strong></em></span></td>
+</tr>
+</table>
+
+<table height="40"  width="100%" cellpadding="0" cellspacing="0" border="0">
+   
+<tr valign="top">
+<td width="100%" background="img/blue.jpg"> <br />&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Label ID="Label1" runat="server" Text="Welcome:" Font-Size="17px"></asp:Label> &nbsp;
+    <asp:Label ID="lidtxt" runat="server" CssClass="style3"></asp:Label>
+    </td>
+</tr>
+</table>
+
+ <table width="100%" cellpadding="0" cellspacing="0" border="1">
+<tr valign="top">
+
+<td width="201" style="height: 336px; text-align: justify;" bgcolor=#FFFFF3><br/>
+<!----- menu, insert links below ------------------------------------------>
+     <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home.aspx" CssClass="style1">Начало</asp:HyperLink>
+    <img src="img/menubar1.jpg" width="231" border="0" alt="" style="height: 3px"><br/>
+    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Schedule.aspx" CssClass="style1">График</asp:HyperLink>
+    <img src="img/menubar1.jpg" width="231" border="0" alt="" style="height: 3px"><br/>
+    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/PatientInfo.aspx" CssClass="style1">Информация за пациента</asp:HyperLink>
+    <img src="img/menubar1.jpg" width="231" border="0" alt="" style="height: 3px"><br/>
+    <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/TestReports.aspx" CssClass="style1">Изследвания</asp:HyperLink>
+    <img src="img/menubar1.jpg" width="231" border="0" alt="" style="height: 3px"><br/>
+    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/AL.aspx" CssClass="style1">Амбулаторен лист</asp:HyperLink>
+    <img src="img/menubar1.jpg" width="231" border="0" alt="" style="height: 3px"><br/>
+   
+<!-------------------------------------------------------------------------->
+</td>
+
+ <td width="100%" style="height: 336px">
+	<table width="100%" cellpadding="10" cellspacing="0" border="0">
+		<tr valign="top">
+			<td style="text-align: justify; height: 566px;">
+<!----- content, insert text and content below ------------------------------------------>
+<h2 style="text-align: left"/>
+
+<br/>
+    <span style="font-size: 14pt"></span>
+    <form id="form1" runat="server">
+    <div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <BR><BR><BR><BR>
+<BR><BR><BR> <Br /> <br />
+    &nbsp;<BR><BR>
+    <em>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="font-size: 15pt">
+            Специализирана извънболнична медицинска помощ!</span></em></h2>
+			</td>
+		</tr>
+	</table>
+</td>
+</tr>
+      
+</table>
+    </body>
+</html>
